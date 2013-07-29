@@ -15,6 +15,7 @@ Bundle 'hallison/vim-markdown'
 Bundle 'msanders/snipmate.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-haml'
 Bundle 'kien/ctrlp.vim'
 
 " settings
@@ -41,6 +42,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4 
 set expandtab
+set smarttab
+
+autocmd FileType html,haml set ts=2 sw=2 sts=2
 
 set showmatch
 
