@@ -46,5 +46,9 @@ set showmatch
 
 set wildmenu
 
+set laststatus=2
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
+
 nmap <F3> :NERDTreeToggle<CR>
 colorscheme desert 
+hi StatusLine ctermfg=black ctermbg=white
