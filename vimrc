@@ -8,15 +8,25 @@ call vundle#rc()
 
 let $GIT_SSL_NO_VERIFY = 'true'
 
+"vundle
 Bundle 'gmarik/vundle'
+
+"utils
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
+Bundle 'kien/ctrlp.vim'
+
+"snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+
+"syntax
 Bundle 'hallison/vim-markdown'
-Bundle 'msanders/snipmate.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
-Bundle 'kien/ctrlp.vim'
 
 " settings
 filetype plugin indent on
@@ -44,7 +54,7 @@ set softtabstop=4
 set expandtab
 set smarttab
 
-autocmd FileType html,haml set ts=2 sw=2 sts=2
+autocmd FileType html,haml,css set ts=2 sw=2 sts=2
 
 set showmatch
 
