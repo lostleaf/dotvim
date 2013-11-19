@@ -15,6 +15,9 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tristen/vim-sparkup'
+Bundle 'tomtom/tcomment_vim'
 
 "snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -65,4 +68,13 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 
 nmap <F3> :NERDTreeToggle<CR>
 colorscheme desert 
+autocmd FileType cpp,c :nmap <silent> <Leader>c :make %<<CR>
+autocmd FileType cpp,c :nmap <silent> <Leader>r :!./%<<CR>
+
+autocmd FileType java :compiler javac
+autocmd FileType java :nmap <silent> <Leader>c :make %<CR>
+autocmd FileType java :nmap <silent> <Leader>r :!java -ea %<<CR>
+
+autocmd FileType ruby :nmap <silent> <Leader>r :!ruby %<CR>
+autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
 hi StatusLine ctermfg=black ctermbg=white
