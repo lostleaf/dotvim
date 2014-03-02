@@ -55,8 +55,6 @@ set softtabstop=4
 set expandtab
 set smarttab
 
-autocmd FileType html,haml,css set ts=2 sw=2 sts=2
-
 set showmatch
 
 set wildmenu
@@ -66,6 +64,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 
 nmap <F3> :NERDTreeToggle<CR>
 colorscheme desert 
+
+autocmd FileType html,haml,css set ts=2 sw=2 sts=2
+
 autocmd FileType cpp,c :nmap <silent> <Leader>c :make %<<CR>
 autocmd FileType cpp,c :nmap <silent> <Leader>r :!./%<<CR>
 
@@ -75,4 +76,6 @@ autocmd FileType java :nmap <silent> <Leader>r :!java -ea %<<CR>
 
 autocmd FileType ruby :nmap <silent> <Leader>r :!ruby %<CR>
 autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
-hi StatusLine ctermfg=black ctermbg=white
+
+autocmd FileType tex :nmap <silent> <Leader>c :!pdflatex %<CR>
+" hi StatusLine ctermfg=black ctermbg=white
