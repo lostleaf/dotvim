@@ -12,7 +12,8 @@ let $GIT_SSL_NO_VERIFY = 'true'
 Bundle 'gmarik/vundle'
 
 "utils
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
@@ -60,7 +61,7 @@ set showmatch
 set wildmenu
 
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{rvm#statusline()}%=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
 
 nmap <F3> :NERDTreeToggle<CR>
 colorscheme desert 
