@@ -22,7 +22,7 @@ Bundle 'tomtom/tcomment_vim'
 
 "snippets
 Bundle "SirVer/ultisnips"
-" Bundle "honza/vim-snippets"
+Bundle "honza/vim-snippets"
 
 "syntax
 Bundle 'hallison/vim-markdown'
