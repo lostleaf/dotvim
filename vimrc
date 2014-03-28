@@ -61,7 +61,7 @@ set showmatch
 set wildmenu
 
 set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{rvm#statusline()}%=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%{rvm#statusline()}%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
 
 nmap <F3> :NERDTreeToggle<CR>
 colorscheme desert 
@@ -79,4 +79,6 @@ autocmd FileType ruby :nmap <silent> <Leader>r :!ruby %<CR>
 autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
 
 autocmd FileType tex :nmap <silent> <Leader>c :!pdflatex %<CR>
+autocmd FileType tex :nmap <silent> <Leader>r :!open %:r.pdf<CR>
 " hi StatusLine ctermfg=black ctermbg=white
+set helplang=cn
