@@ -30,6 +30,7 @@ Bundle 'hallison/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
+Bundle 'vim-scripts/NesC-Syntax-Highlighting'
 
 " settings
 filetype plugin indent on
@@ -66,6 +67,10 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%{rvm#statusline()}%-16(\ %l,%c-%v\ 
 
 nmap <F3> :NERDTreeToggle<CR>
 colorscheme desert 
+
+augroup filetypedetect 
+  au! BufRead,BufNewFile *nc setfiletype nc 
+augroup END
 
 autocmd FileType html,haml,css set ts=2 sw=2 sts=2
 
