@@ -19,6 +19,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tristen/vim-sparkup'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'Lokaltog/vim-easymotion'
 
 "snippets
 Bundle "SirVer/ultisnips"
