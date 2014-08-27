@@ -30,7 +30,6 @@ Bundle 'hallison/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
-Bundle 'vim-scripts/NesC-Syntax-Highlighting'
 call vundle#end()
 
 " settings
