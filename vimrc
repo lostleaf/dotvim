@@ -4,7 +4,7 @@ filetype off
 " bundles
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 let $GIT_SSL_NO_VERIFY = 'true'
 
@@ -31,6 +31,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
 Bundle 'vim-scripts/NesC-Syntax-Highlighting'
+call vundle#end()
 
 " settings
 filetype plugin indent on
