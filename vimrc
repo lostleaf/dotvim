@@ -84,7 +84,9 @@ autocmd FileType java :nmap <silent> <Leader>c :make %<CR>
 autocmd FileType java :nmap <silent> <Leader>r :!java -ea %<<CR>
 
 autocmd FileType ruby :nmap <silent> <Leader>r :!ruby %<CR>
+
 autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
+autocmd FileType python setlocal completeopt-=preview
 
 autocmd FileType tex :nmap <silent> <Leader>c :!pdflatex %<CR>
 autocmd FileType tex :nmap <silent> <Leader>r :!open %:r.pdf<CR>
