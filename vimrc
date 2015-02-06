@@ -21,6 +21,9 @@ Bundle 'tristen/vim-sparkup'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'Lokaltog/vim-easymotion'
 
+"auto completion
+Bundle 'davidhalter/jedi-vim'
+
 "snippets
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
