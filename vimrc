@@ -86,5 +86,8 @@ autocmd FileType python setlocal completeopt-=preview
 
 autocmd FileType tex :nmap <silent> <Leader>c :!pdflatex %<CR>
 autocmd FileType tex :nmap <silent> <Leader>r :!open %:r.pdf<CR>
-" hi StatusLine ctermfg=black ctermbg=white
-set helplang=cn
+
+" resolve confilction of youcompleteme and ultisnip
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
