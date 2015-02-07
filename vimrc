@@ -22,7 +22,8 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'Lokaltog/vim-easymotion'
 
 "auto completion
-Bundle 'davidhalter/jedi-vim'
+" Bundle 'davidhalter/jedi-vim'
+Bundle 'Valloric/YouCompleteMe'
 
 "snippets
 Bundle "SirVer/ultisnips"
