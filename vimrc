@@ -24,10 +24,9 @@ Bundle 'Lokaltog/vim-easymotion'
 "auto completion
 " Bundle 'davidhalter/jedi-vim'
 Bundle 'Valloric/YouCompleteMe'
-
-"snippets
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
+Bundle "ervandew/supertab"
 
 "syntax
 Bundle 'hallison/vim-markdown'
@@ -70,10 +69,6 @@ set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%{rvm#statusline()}%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
 
 colorscheme desert 
-
-augroup filetypedetect 
-  au! BufRead,BufNewFile *nc setfiletype nc 
-augroup END
 
 autocmd FileType html,haml,css set ts=2 sw=2 sts=2
 
