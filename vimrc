@@ -23,10 +23,10 @@ Bundle 'Lokaltog/vim-easymotion'
 
 "auto completion
 " Bundle 'davidhalter/jedi-vim'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
-Bundle "ervandew/supertab"
+" Bundle "ervandew/supertab"
 
 "syntax
 Bundle 'hallison/vim-markdown'
@@ -88,8 +88,8 @@ autocmd FileType tex :nmap <silent> <Leader>c :!pdflatex %<CR>
 autocmd FileType tex :nmap <silent> <Leader>r :!open %:r.pdf<CR>
 
 " resolve confilction of youcompleteme and ultisnip
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:SuperTabDefaultCompletionType = '<C-n>'
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
