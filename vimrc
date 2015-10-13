@@ -20,6 +20,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tristen/vim-sparkup'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'klen/python-mode'
 
 "auto completion
 " Bundle 'davidhalter/jedi-vim'
@@ -33,6 +34,8 @@ Bundle 'hallison/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
+Plugin 'pangloss/vim-javascript'
+Plugin 'hdima/python-syntax'
 call vundle#end()
 
 " settings
