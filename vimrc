@@ -20,14 +20,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'tristen/vim-sparkup'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'klen/python-mode'
 
 "auto completion
-" Bundle 'davidhalter/jedi-vim'
-" Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
-" Bundle "ervandew/supertab"
+Bundle 'ervandew/supertab'
 
 "syntax
 Bundle 'hallison/vim-markdown'
@@ -36,6 +34,9 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
 Plugin 'pangloss/vim-javascript'
 Plugin 'hdima/python-syntax'
+
+Plugin 'altercation/vim-colors-solarized'
+
 call vundle#end()
 
 " settings
@@ -65,13 +66,19 @@ set expandtab
 set smarttab
 
 set showmatch
+set showcmd
 
 set wildmenu
 
-set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%{rvm#statusline()}%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
+set hidden
 
-colorscheme desert 
+set laststatus=2
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
+
+set background=dark
+colorscheme solarized
+set t_Co=16
+let g:solarized_termcolors=16
 
 autocmd FileType html,haml,css set ts=2 sw=2 sts=2
 
@@ -91,8 +98,12 @@ autocmd FileType tex :nmap <silent> <Leader>c :!pdflatex %<CR>
 autocmd FileType tex :nmap <silent> <Leader>r :!open %:r.pdf<CR>
 
 " resolve confilction of youcompleteme and ultisnip
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-" let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ctrlp_custom_ignore = 'build\|\.git'
