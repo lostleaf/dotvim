@@ -13,7 +13,6 @@ Bundle 'gmarik/vundle'
 
 "utils
 " Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
