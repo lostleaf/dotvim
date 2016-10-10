@@ -74,10 +74,10 @@ set hidden
 set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
 
-set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
+set background=dark
 set t_Co=16
-let g:solarized_termcolors=16
 
 autocmd FileType html,haml,css set ts=2 sw=2 sts=2
 
