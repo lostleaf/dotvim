@@ -74,7 +74,7 @@ set hidden
 set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
 
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 colorscheme solarized
 set background=dark
 set t_Co=16
