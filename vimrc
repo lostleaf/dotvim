@@ -13,7 +13,6 @@ Bundle 'gmarik/vundle'
 
 "utils
 " Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tristen/vim-sparkup'
@@ -28,9 +27,6 @@ Bundle 'ervandew/supertab'
 
 "syntax
 Bundle 'hallison/vim-markdown'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-haml'
 Plugin 'pangloss/vim-javascript'
 Plugin 'hdima/python-syntax'
 
