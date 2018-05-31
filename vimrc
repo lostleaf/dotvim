@@ -11,94 +11,96 @@ let $GIT_SSL_NO_VERIFY = 'true'
 "vundle
 Bundle 'gmarik/vundle'
 
-"utils
-" Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tristen/vim-sparkup'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'Lokaltog/vim-easymotion'
+"tree explorer
+Bundle 'scrooloose/nerdtree'
 
-"auto completion
-Bundle 'Valloric/YouCompleteMe'
+"fuzzy finder
+Bundle 'kien/ctrlp.vim' 
+
+"change surroundings
+Bundle 'tpope/vim-surround' 
+
+"comment lines
+Bundle 'tomtom/tcomment_vim' 
+
+"jump to anywhere
+Bundle 'Lokaltog/vim-easymotion' 
+
+"snippets
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
-Bundle 'ervandew/supertab'
 
 "syntax
-Bundle 'hallison/vim-markdown'
-Plugin 'pangloss/vim-javascript'
-Plugin 'hdima/python-syntax'
+Plugin 'vim-python/python-syntax'
 
+"color scheme
 Plugin 'altercation/vim-colors-solarized'
 
+"syntax check
+Plugin 'w0rp/ale'
+
+"auto completion
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
-
-" settings
 filetype plugin indent on
+"vundle end
 
+"turn on syntax highlighting
 syntax on
 
+"turn on line number
 set number
 
+"search settings
 set hlsearch
 set incsearch
 set gdefault
 set smartcase
 
+"indentation
 set autoindent
 set smartindent
-
-set backspace=indent,eol,start
-
-set fileencoding=utf8
-set fileencodings=utf-8,ucs-bom,gb18030,default
-
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4 
 set expandtab
 set smarttab
 
+"make backspace normal
+set backspace=indent,eol,start
+
+"encodings
+set fileencoding=utf8
+set fileencodings=utf-8,ucs-bom,gb18030,default
+
+"show match braces
 set showmatch
+
+"show typing command
 set showcmd
 
+"command completion
 set wildmenu
 
-set hidden
-
+"status line
 set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
 
+"color scheme
 let g:solarized_termcolors=16
 colorscheme solarized
 set background=dark
 set t_Co=16
 
-autocmd FileType html,haml,css set ts=2 sw=2 sts=2
-
-autocmd FileType cpp,c :nmap <silent> <Leader>c :make %<<CR>
-autocmd FileType cpp,c :nmap <silent> <Leader>r :!./%<<CR>
-
-autocmd FileType java :compiler javac
-autocmd FileType java :nmap <silent> <Leader>c :make %<CR>
-autocmd FileType java :nmap <silent> <Leader>r :!java -ea %<<CR>
-
-autocmd FileType ruby :nmap <silent> <Leader>r :!ruby %<CR>
-
 autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
+"disable docstring
 autocmd FileType python setlocal completeopt-=preview
 
-autocmd FileType tex :nmap <silent> <Leader>c :!pdflatex %<CR>
-autocmd FileType tex :nmap <silent> <Leader>r :!open %:r.pdf<CR>
-
-" resolve confilction of youcompleteme and ultisnip
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"exclude build and git
 let g:ctrlp_custom_ignore = 'build\|\.git'
+
+"map leader to ,
+:let mapleader = ","
+
+"python high all
+let g:python_highlight_all = 1
