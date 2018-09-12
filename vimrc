@@ -96,6 +96,8 @@ autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
 "disable docstring
 autocmd FileType python setlocal completeopt-=preview
 
+nnoremap <C-n> :NERDTreeToggle<CR>
+
 "exclude build and git
 let g:ctrlp_custom_ignore = 'build\|\.git'
 
