@@ -40,7 +40,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'w0rp/ale'
 
 "auto completion
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 filetype plugin indent on
 "vundle end
@@ -92,8 +92,13 @@ colorscheme solarized
 set background=dark
 set t_Co=16
 
+"use ';r' to run current program
 autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
-"disable docstring
+
+"set formatter yapf
+autocmd FileType python setlocal formatprg=yapf
+
+"disable preview window
 autocmd FileType python setlocal completeopt-=preview
 
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -102,7 +107,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_custom_ignore = 'build\|\.git'
 
 "map leader to ,
-:let mapleader = ","
+:let mapleader = ";"
 
 "python high all
 let g:python_highlight_all = 1
