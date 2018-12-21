@@ -17,14 +17,17 @@ Plug 'w0rp/ale' "syntax check
 
 call plug#end()
 
-"turn on filetype
-filetype plugin indent on
-
-"turn on syntax highlighting
-syntax on
-
-"turn on line number
-set number
+filetype plugin indent on "turn on filetype
+syntax on "turn on syntax highlighting
+set number "turn on line number
+set fileencoding=utf8 "default encoding
+set fileencodings=utf-8,ucs-bom,gb18030,default "encodings
+set showmatch "show match braces
+set showcmd "show typing command
+set wildmenu "command completion
+set laststatus=2 "status line
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
+set backspace=indent,eol,start "make backspace normal
 
 "search settings
 set hlsearch
@@ -41,26 +44,6 @@ set softtabstop=4
 set expandtab
 set smarttab
 
-"make backspace normal
-set backspace=indent,eol,start
-
-"encodings
-set fileencoding=utf8
-set fileencodings=utf-8,ucs-bom,gb18030,default
-
-"show match braces
-set showmatch
-
-"show typing command
-set showcmd
-
-"command completion
-set wildmenu
-
-"status line
-set laststatus=2
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
-
 "color scheme
 try
     let g:solarized_termcolors=16
@@ -71,22 +54,22 @@ catch /^Vim\%((\a\+)\)\=:E185/
     colorscheme desert
 endtry
 
+autocmd FileType python setlocal formatprg=yapf "set formatter yapf
+autocmd FileType python setlocal completeopt-=preview "disable preview window
 "use ';r' to run current program
 autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
-
-"set formatter yapf
-autocmd FileType python setlocal formatprg=yapf
-
-"disable preview window
-autocmd FileType python setlocal completeopt-=preview
-
+"use ctrl-n to toggle nerd tree
 nnoremap <C-n> :NERDTreeToggle<CR>
 
-"exclude build and git
-let g:ctrlp_custom_ignore = 'build\|\.git'
+let mapleader = ";" "map leader to ;
+let g:ctrlp_custom_ignore = 'build\|\.git' "exclude build and git
+let g:python_highlight_all = 1 "python high all
 
-"map leader to ;
-:let mapleader = ";"
+"ale
+let g:ale_sign_error = "\u2718"
+let g:ale_sign_warning = "\u26A0"
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_python_pylint_options='--disable=C0111'
 
-"python high all
-let g:python_highlight_all = 1
