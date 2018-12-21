@@ -106,7 +106,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 "exclude build and git
 let g:ctrlp_custom_ignore = 'build\|\.git'
 
-"map leader to ,
+"map leader to ;
 :let mapleader = ";"
 
 "python high all
