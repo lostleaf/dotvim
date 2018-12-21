@@ -1,6 +1,6 @@
 set nocompatible
 
-" Plugin directory
+"plugin directory
 call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/vundle' "vundle
@@ -19,7 +19,6 @@ call plug#end()
 
 "turn on filetype
 filetype plugin indent on
-"vundle end
 
 "turn on syntax highlighting
 syntax on
@@ -63,10 +62,14 @@ set laststatus=2
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %=%-16(\ %l,%c-%v\ %)[%{&fenc}]%P
 
 "color scheme
-let g:solarized_termcolors=16
-colorscheme solarized
-set background=dark
-set t_Co=16
+try
+    let g:solarized_termcolors=16
+    colorscheme solarized
+    set background=dark
+    set t_Co=16
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme desert
+endtry
 
 "use ';r' to run current program
 autocmd FileType python :nmap <silent> <Leader>r :!python %<CR>
