@@ -1,47 +1,23 @@
 set nocompatible
-filetype off
 
-" bundles
+" Plugin directory
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
+Plug 'gmarik/vundle' "vundle
+Plug 'scrooloose/nerdtree' "tree explorer
+Plug 'kien/ctrlp.vim' "fuzzy finder
+Plug 'tpope/vim-surround' "change surroundings
+Plug 'tomtom/tcomment_vim' "comment lines
+Plug 'Lokaltog/vim-easymotion' "jump to anywhere
+Plug 'SirVer/ultisnips' "snippets
+Plug 'honza/vim-snippets'
+Plug 'vim-python/python-syntax' "syntax
+Plug 'altercation/vim-colors-solarized' "color scheme
+Plug 'w0rp/ale' "syntax check
 
-let $GIT_SSL_NO_VERIFY = 'true'
+call plug#end()
 
-"vundle
-Bundle 'gmarik/vundle'
-
-"tree explorer
-Bundle 'scrooloose/nerdtree'
-
-"fuzzy finder
-Bundle 'kien/ctrlp.vim' 
-
-"change surroundings
-Bundle 'tpope/vim-surround' 
-
-"comment lines
-Bundle 'tomtom/tcomment_vim' 
-
-"jump to anywhere
-Bundle 'Lokaltog/vim-easymotion' 
-
-"snippets
-Bundle "SirVer/ultisnips"
-Bundle "honza/vim-snippets"
-
-"syntax
-Plugin 'vim-python/python-syntax'
-
-"color scheme
-Plugin 'altercation/vim-colors-solarized'
-
-"syntax check
-Plugin 'w0rp/ale'
-
-"auto completion
-" Plugin 'davidhalter/jedi-vim'
-call vundle#end()
+"turn on filetype
 filetype plugin indent on
 "vundle end
 
