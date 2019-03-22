@@ -11,9 +11,10 @@ Plug 'tomtom/tcomment_vim' "comment lines
 Plug 'Lokaltog/vim-easymotion' "jump to anywhere
 Plug 'SirVer/ultisnips' "snippets
 Plug 'honza/vim-snippets'
-Plug 'vim-python/python-syntax' "syntax
+Plug 'wmayner/python3-syntax' "syntax python
 Plug 'altercation/vim-colors-solarized' "color scheme
 Plug 'w0rp/ale' "syntax check
+Plug 'mxw/vim-jsx' "syntax react
 
 call plug#end()
 
