@@ -14,7 +14,7 @@ Plug 'honza/vim-snippets'
 Plug 'wmayner/python3-syntax' "syntax python
 Plug 'altercation/vim-colors-solarized' "color scheme
 Plug 'w0rp/ale' "syntax check
-Plug 'mxw/vim-jsx' "syntax react
+Plug 'mxw/vim-jsx' "syntax react jsx
 
 call plug#end()
 
