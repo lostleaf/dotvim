@@ -9,7 +9,6 @@ Plug 'kien/ctrlp.vim' "fuzzy finder
 Plug 'tpope/vim-surround' "change surroundings
 Plug 'tomtom/tcomment_vim' "comment lines
 Plug 'Lokaltog/vim-easymotion' "jump to anywhere
-Plug 'SirVer/ultisnips' "snippets
 Plug 'honza/vim-snippets'
 Plug 'wmayner/python3-syntax' "syntax python
 Plug 'altercation/vim-colors-solarized' "color scheme
